@@ -2,31 +2,19 @@
 <html lang="en" class="bg-app">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/jan-logo.png"
-    />
-    
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/jan-logo.png"
-    />
-    <link rel="apple-touch-icon" href="/images/jan-logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/images/sheep.svg" />
+    <link rel="apple-touch-icon" href="/images/sheep.svg" />
     <link
       rel="preload"
       as="image"
-      href="/images/jan-logo.png"
+      href="/images/sheep.svg"
       fetchpriority="high"
     />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
     />
-    <title>Jan</title>
+    <title>SheepAI</title>
     <style>
       /* Inlined so it applies on first paint (external CSS is injected late). */
       #initial-loader {
@@ -43,11 +31,12 @@
         transition: opacity 0.3s ease-in-out;
       }
       .dark #initial-loader {
-        background: rgb(25, 25, 25);
+        background: #000000;
       }
+      /* The sheep is wider than tall (615 by 525). */
       #initial-loader img {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: auto;
         /* Static first; waves only if setup runs past the delay. */
         animation: wave 2s ease-in-out 2.5s infinite;
         transform-origin: 70% 70%;
@@ -110,7 +99,8 @@
       (function () {
         try {
           var raw = localStorage.getItem('theme')
-          var active = 'auto'
+          // Dark unless changed: useTheme's default.
+          var active = 'dark'
           if (raw) {
             var parsed = JSON.parse(raw)
             var s = parsed && parsed.state
@@ -128,8 +118,8 @@
   </head>
   <body>
     <div id="initial-loader" data-tauri-drag-region>
-      <img src="/images/jan-logo.png" alt="Jan Logo" data-tauri-drag-region />
-      <p id="initial-loader-caption" data-tauri-drag-region>Booting up Jan…</p>
+      <img src="/images/sheep.svg" alt="SheepAI" data-tauri-drag-region />
+      <p id="initial-loader-caption" data-tauri-drag-region>Starting SheepAI…</p>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

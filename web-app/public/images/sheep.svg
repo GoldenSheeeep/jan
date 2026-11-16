@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="260 215 615 525" width="615" height="525">
+  <!-- white outline: the silhouette stroked in white, drawn underneath -->
+  <g fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round">
+    <rect x="510" y="672" width="49" height="46"/>
+    <rect x="678" y="676" width="48" height="42"/>
+    <path d="M306,462 C290,492 274,538 293,551 C318,566 366,550 400,528 L360,456 Z"/>
+    <polygon points="476,240 743,265 851,426 851,541 727,680 511,676 463,642 397,527 358,459 304,465 348,383"/>
+  </g>
+  <!-- legs -->
+  <rect x="510" y="672" width="49" height="46" fill="#000"/>
+  <rect x="678" y="676" width="48" height="42" fill="#000"/>
+  <!-- head -->
+  <path d="M306,462 C290,492 274,538 293,551 C318,566 366,550 400,528 L360,456 Z" fill="#000"/>
+  <!-- body silhouette (darkest orange) -->
+  <polygon points="476,240 743,265 851,426 851,541 727,680 511,676 463,642 397,527 358,459 304,465 348,383" fill="#EC9410"/>
+  <!-- facets -->
+  <polygon points="476,240 743,265 713,294 647,360 502,258 348,383" fill="#FDE54E"/>
+  <polygon points="743,265 851,426 713,294" fill="#FCE775"/>
+  <polygon points="713,294 851,426 647,360" fill="#FCDA2C"/>
+  <polygon points="348,383 502,258 516,470" fill="#FBD324"/>
+  <polygon points="502,258 647,360 516,470" fill="#F6BC1C"/>
+  <polygon points="647,360 851,426 744,581 516,470" fill="#F3AF1B"/>
+  <polygon points="851,426 851,541 744,581" fill="#F0A816"/>
+  <polygon points="348,383 516,470 432,539" fill="#F3AF1B"/>
+  <polygon points="516,470 744,581 625,628" fill="#EE9B10"/>
+  <polyline points="302,466 358,459 403,537" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
+</svg>

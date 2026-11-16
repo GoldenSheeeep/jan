@@ -57,7 +57,9 @@ const AppLayout = () => {
         <AnalyticProvider />
         <KeyboardShortcutsProvider />
         {/* Fake absolute panel top to enable window drag */}
-        {(IS_WINDOWS || IS_LINUX) && <WindowControls />}
+        {/* On Linux the title bar and its buttons are Hyprland's (hyprbars,
+            in the NixOS config's modules/hyprland). */}
+        {IS_WINDOWS && <WindowControls />}
         {IS_LINUX && <WindowResizeGrips />}
         {IS_TAURI && (
           <div

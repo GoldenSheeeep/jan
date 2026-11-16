@@ -807,8 +807,8 @@ function MCPServersDesktop() {
                           {config.official && (
                             <div className="flex items-center gap-1.5 px-2 py-0.5 text-xs bg-secondary border rounded-sm">
                               <img
-                                src="/images/jan-logo.png"
-                                alt="Jan"
+                                src="/images/sheep.svg"
+                                alt="SheepAI"
                                 className="w-3 h-3 object-contain"
                               />
                               <span>Official</span>

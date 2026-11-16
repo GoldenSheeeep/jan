@@ -41,7 +41,7 @@ export function LeftSidebar() {
       <Sidebar variant="floating" collapsible="offcanvas">
         <SidebarHeader className="flex px-1">
           <div className={cn("flex items-center w-full justify-between", reserveLeft && "justify-end")}>
-            {!reserveLeft && <span className="ml-2 font-medium font-studio">Jan</span>}
+            {!reserveLeft && <span className="ml-2 font-medium font-studio">SheepAI</span>}
             <div className="flex items-center">
               {/* On mobile the page header already hosts the download indicator. */}
               {isLeftPanelOpen && !isMobile && <DownloadManagement />}
