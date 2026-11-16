@@ -337,6 +337,18 @@ pub fn get_user_home_path<R: Runtime>(app: AppHandle<R>) -> String {
     get_app_configurations(app.clone()).data_folder
 }
 
+/// The user's own stylesheet, `~/.config/jan/custom.css`, applied over the
+/// app's theme (web-app/src/providers/CustomCssProvider.tsx). Empty when the
+/// file doesn't exist.
+#[cfg(not(feature = "cli"))]
+#[tauri::command]
+pub fn get_custom_css() -> String {
+    dirs::config_dir()
+        .map(|d| d.join("jan").join("custom.css"))
+        .and_then(|path| fs::read_to_string(path).ok())
+        .unwrap_or_default()
+}
+
 #[cfg(not(feature = "cli"))]
 #[tauri::command]
 pub fn change_app_data_folder<R: Runtime>(

@@ -4,6 +4,7 @@ import { createRootRoute, Outlet } from '@tanstack/react-router'
 import DialogAppUpdater from '@/containers/dialogs/AppUpdater'
 import { Fragment } from 'react/jsx-runtime'
 import { ThemeProvider } from '@/providers/ThemeProvider'
+import { CustomCssProvider } from '@/providers/CustomCssProvider'
 import { InterfaceProvider } from '@/providers/InterfaceProvider'
 import { KeyboardShortcutsProvider } from '@/providers/KeyboardShortcuts'
 import { DataProvider } from '@/providers/DataProvider'
@@ -115,6 +116,7 @@ function RootLayout() {
     // component mounts and needs them already initialized.
     <Fragment>
       <ThemeProvider />
+      <CustomCssProvider />
       <InterfaceProvider />
       <ToasterProvider />
       <DataProvider />

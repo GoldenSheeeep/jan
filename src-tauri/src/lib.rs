@@ -56,6 +56,7 @@ macro_rules! invoke_commands_with_extras {
         // App configuration commands
         core::app::commands::get_app_configurations,
         core::app::commands::get_user_home_path,
+        core::app::commands::get_custom_css,
         core::app::commands::update_app_configuration,
         core::app::commands::get_jan_data_folder_path,
         core::app::commands::get_configuration_file_path,

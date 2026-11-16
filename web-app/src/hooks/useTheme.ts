@@ -23,10 +23,10 @@ export type ThemeState = {
 export const useTheme = create<ThemeState>()(
   persist(
     (set) => {
-      // Initialize isDark based on OS preference if theme is auto
+      // Black (dark) until changed in Settings > Interface.
       const initialState = {
-        activeTheme: 'auto' as AppTheme,
-        isDark: checkOSDarkMode(),
+        activeTheme: 'dark' as AppTheme,
+        isDark: true,
         setTheme: async (activeTheme: AppTheme) => {
           // Commit first so the theme-changed listener (which gates on
           // activeTheme) ignores any portal/WindowEvent fired by the native
